@@ -119,7 +119,6 @@ if __name__ == '__main__':
 
     fileName = params['fileName'] + str(params['seq_len'] - 2)
     model = UniModel(params)
-    training_data = Sample(batch_size=params['BATCH_SIZE'],fileName=f'{fileName}_training' + '_float')
     test_data = Sample(batch_size=params['BATCH_SIZE'] * 10, fileName=f'{fileName}_test' + '_float')
 
     trainer = ModelTrainer(model=model, num_epochs=params['EPOCH'])
